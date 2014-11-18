@@ -1,0 +1,29 @@
+{
+  "name": "apostrophe-xlsx",
+  "version": "0.5.1",
+  "description": "For importing and exporting data in XLSX format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punkave/apostrophe-xlsx"
+  },
+  "author": "P'unk Avenue",
+  "license": "BSD",
+  "dependencies": {
+    "xlsx": "~0.7.12"
+  },
+  "bugs": {
+    "url": "https://github.com/punkave/apostrophe-xlsx/issues"
+  },
+  "homepage": "https://github.com/punkave/apostrophe-xlsx",
+  "keywords": [
+    "apostrophe",
+    "xlsx",
+    "excel",
+    "import",
+    "export"
+  ]
+}
