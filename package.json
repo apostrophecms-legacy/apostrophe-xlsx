@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-xlsx",
-  "version": "0.5.02",
+  "version": "0.5.2",
   "description": "For importing and exporting data in XLSX format.",
   "main": "index.js",
   "scripts": {
