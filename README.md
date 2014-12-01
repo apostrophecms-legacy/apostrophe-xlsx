@@ -5,3 +5,5 @@ For supporting Excel 2007 (xlsx) files for apostrophe-snippets import and export
 #### Configure
 
 In app.js, add `'apostrophe-xlsx': {},` to `modules`, before any instance of snippets (people, groups, ect.).
+
+XLSX will automatically be added as a supported format to the editor modals and instructions.
