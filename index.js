@@ -89,18 +89,28 @@ aposXlsx.Construct = function(options, callback) {
 	// This is accessed by apostrophe-snippets
 	// to generate the help text in Import.html
 	// and Export.html
-	self._apos.on('supportedDataIO' , function(supportedDataIO) {
-	  supportedDataIO.formats.push({ label: 'XLSX', value: 'xlsx'});
+	self._apos.on('supportedImport' , function(supportedImport) {
+	  supportedImport.formats.push({ label: 'XLSX', value: 'xlsx'});
+	});
+
+	self._apos.on('supportedExport' , function(supportedExport) {
+	  supportedExport.formats.push({ label: 'XLSX', value: 'xlsx'});
 	});
 
 	// Parse xlsx file to CSV on import
-	self._apos.on('xlsxImport' , function(context) {
-	  context.csv = self.xlsxToCsv(context.path);
+	self._apos.on('import' , function(context) {
+		if (context.format !== 'xlsx') {
+			return;
+		}
+	  context.output = self.xlsxToCsv(context.path);
 	});
 
 	// Generate xlsx file from snippets data
-	self._apos.on('xlsxExport' , function(context) {
-	  context.xlsx = self.arrayOfArraysToXlsx(context.data);
+	self._apos.on('export' , function(context) {
+		if (context.format !== 'xlsx') {
+			return;
+		}
+	  context.output = self.arrayOfArraysToXlsx(context.data);
 	});
 
 
